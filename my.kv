@@ -1,0 +1,178 @@
+<Label>:
+    color:0,0,1,1
+    font_name:"JetBrainsMono-Regular.ttf"
+<Button>:
+    color:0,1,0,1
+
+<MainWindow>:
+    name:"main"
+
+    n:n
+    email: email
+    created:created
+
+    FloatLayout:
+        Label:
+            id: n
+            pos_hint:{"x": 0.1, "top":0.9}
+            size_hint:0.8, 0.2
+            text: "Account Name: "
+
+
+        Label:
+            id: email
+            pos_hint:{"x": 0.1, "top":0.7}
+            size_hint:0.8, 0.2
+            text: "Email: "
+
+
+        Label:
+            id: created
+            pos_hint:{"x": 0.1, "top":0.5}
+            size_hint:0.8, 0.2
+            text: "Created: "
+
+
+        Button:
+            pos_hint:{"x":0.2, "y": 0.1}
+            size_hint:0.6,0.2
+            text: "Log Out"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.logOut()
+
+
+
+<SignInWindow>:
+    name:"login"
+
+    email:email
+    password:password
+
+    FloatLayout:
+
+        Label:
+            text:"Email       "
+            font_size:30
+            pos_hint:{"x":.02,"top":.92}
+            size_hint:.4,.1
+
+
+        TextInput:
+            id:email
+            multiline:False
+            font_size:20
+            pos_hint:{"x":.3,"top":.9}
+            size_hint:.5,.06
+
+        Label:
+            text:"Password   "
+            font_size:30
+            pos_hint:{"x":.005,"top":.72}
+            size_hint:.4,.1
+
+
+        TextInput:
+            id:password
+            multiline:False
+            password:True
+            font_size:20
+            pos_hint:{"x":.3,"top":.7}
+            size_hint:.5,.06
+
+        Button:
+            text:"Create Account"
+            pos_hint:{"x":.25,"top":.5}
+            size_hint:.5,.1
+            on_release:
+                root.manager.transition.direction="right"
+                root.create_account_btn()
+
+        Button:
+            text:"Login"
+            pos_hint:{"x":.2,"top":.3}
+            size_hint:.6,.2
+            font_size : 40
+            on_release:
+                root.manager.transition.direction="left"
+                root.login_btn()
+
+
+<SignUpWindow>:
+    name:"signup"
+
+    namee:namee
+    email:email
+    password:password
+
+    FloatLayout:
+
+        Label:
+            text:"Create Account"
+            font_size:40
+            pos_hint:{"x":.2,"top":1}
+            size_hint:.6,.1
+
+
+        Label:
+            text:"Name        "
+            font_size:30
+            pos_hint:{"x":.02,"top":.85}
+            size_hint:.4,.1
+
+
+        TextInput:
+            id:namee
+            multiline:False
+            font_size:20
+            pos_hint:{"x":.3,"top":.83}
+            size_hint:.5,.06
+
+        Label:
+            text:"Email      "
+            font_size:30
+            pos_hint:{"x":.005,"top":.69}
+            size_hint:.4,.1
+
+
+        TextInput:
+            id:email
+            multiline:False
+            font_size:20
+            pos_hint:{"x":.3,"top":.67}
+            size_hint:.5,.06
+
+        Label:
+            text:"Password   "
+            font_size:30
+            pos_hint:{"x":.005,"top":.52}
+            size_hint:.4,.1
+
+
+        TextInput:
+            id:password
+            multiline:False
+            password:True
+            font_size:20
+            pos_hint:{"x":.3,"top":.5}
+            size_hint:.5,.06
+        Button:
+            text:"Already have an account"
+            pos_hint:{"x":.25,"top":.35}
+            size_hint:.5,.08
+            on_release:
+                root.manager.transition.direction="left"
+                root.already_have_account_btn()
+
+        Button:
+            text:"Submit"
+            pos_hint:{"x":.2,"top":.2}
+            size_hint:.6,.15
+            font_size : 40
+            on_release:
+                root.manager.transition.direction="left"
+                root.submit_btn()
+
+
+
+
