@@ -10,6 +10,3 @@
 # SignUp Page
 After creating account you email will be registered on app and also stored in my "Firebase" server
 ![Screenshot (50)](https://user-images.githubusercontent.com/60619133/86096031-604f6000-bad0-11ea-80db-7111c5520ddc.png)
-#
-You can check your registration here
-https://console.firebase.google.com/project/loginpage-980d8/authentication/users
