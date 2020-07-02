@@ -5,20 +5,6 @@ from kivy.uix.popup import Popup
 import pyrebase
 from getpass import getpass
 
-firebaseConfig = {
-    "apiKey": "AIzaSyB_eHoSmqAxsGnLYpOT9g_1Uh4xz6mJJPo",
-    "authDomain": "loginpage-980d8.firebaseapp.com",
-    "databaseURL": "https://loginpage-980d8.firebaseio.com",
-    "projectId": "loginpage-980d8",
-    "storageBucket": "loginpage-980d8.appspot.com",
-    "messagingSenderId": "315170475265",
-    "appId": "1:315170475265:web:4bbdd605ffbe39e8159f00",
-    "measurementId": "G-59H78G717C"
-}
-
-firebase=pyrebase.initialize_app(firebaseConfig)
-auth=firebase.auth()
-
 class DataBase:
     def __init__(self,filename):
         self.filename = filename
